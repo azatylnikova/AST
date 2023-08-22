@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
+    "watch:serve": "ts-node --inspect src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^15.0.2",
-    "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
